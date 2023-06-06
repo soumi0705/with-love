@@ -1,0 +1,25 @@
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+html, body {
+    height: 100%;
+    background-image: url("/public/background/love.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+}
+#root {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+.wrapper {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.glow {
+    font-size: 2rem;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff6e, 0 0 30px #ffffff0c, 0 0 40px #ffffff00, 0 0 50px #ffffff00, 0 0 60px #ffffff00, 0 0 70px #ffffff00;
+  }
