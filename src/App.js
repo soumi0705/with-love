@@ -13,8 +13,9 @@ function App() {
   const json = require("./message.json");
   const [password, setPassword] = useState("");
   const getRandomImage = () => {
-    const randomIndex = Math.floor(Math.random() * json.image.length);
-    return json.image[randomIndex];
+    const randomIndex2 = Math.floor(Math.random() * json.image.length);
+    
+    return json.image[randomIndex2];
   };
   const getRandomMessage = () => {
     const randomIndex = Math.floor(Math.random() * json.messages.length);
