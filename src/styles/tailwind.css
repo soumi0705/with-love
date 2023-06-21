@@ -1,25 +1,84 @@
-@import 'tailwindcss/utilities';
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-html, body {
-    height: 100%;
-    background-image: url("/public/background/love.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    font-family: 'Roboto', sans-serif;
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans&display=swap');
+html {
+  max-height: 100vh;
+  background-color: #25354e;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: "Roboto", sans-serif;
 }
-#root {
-    height: 100%;
-    width: 100%;
-    display: table;
+body {
+  margin: 0px;
 }
 .wrapper {
-    display: table-cell;
-    height: 100%;
-    vertical-align: middle;
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
 }
 
-.glow {
+/* .glow {
     font-size: 2rem;
     text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff6e, 0 0 30px #ffffff0c, 0 0 40px #ffffff00, 0 0 50px #ffffff00, 0 0 60px #ffffff00, 0 0 70px #ffffff00;
+  } */
+
+.container {
+  height: 100vh;
+}
+
+.title {
+  margin-top: 0px;
+  padding-top: 46px;
+  font-family: 'Average Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #fcfcfc;
+
+  text-shadow: 0px 0px 10px #febbff;
+}
+
+.description-body {
+  display: flex;
+  height: 80%;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+.description-text {
+  width: 100%;
+  max-width: 445px;
+}
+
+.image {
+  width: 90%;
+  max-width: 450px;
+  height: inherit;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    padding: 40px;
   }
+
+  .title {
+    font-size: 48px;
+    padding: 20px;
+  }
+
+  .description {
+    font-size: 24px;
+    padding: 10px 20px;
+  }
+}
