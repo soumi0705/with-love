@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-function Message({ text }) {
+function Message({ text, image }) {
   return (
     <div className="description-body items-center justify-center">
-      <img className="image" src={process.env.PUBLIC_URL + '/background/love.jpg'} alt="background"></img>
+      <img className="image" src={image} alt="background"></img>
       <div className="description-text text-center p-1 text-white bg-black bg-opacity-60">{text}</div>
     </div>
   );
@@ -12,6 +12,10 @@ function Message({ text }) {
 function App() {
   const json = require("./message.json");
   const [password, setPassword] = useState("");
+  const getRandomImage = () => {
+    const randomIndex = Math.floor(Math.random() * json.image.length);
+    return json.image[randomIndex];
+  };
   const getRandomMessage = () => {
     const randomIndex = Math.floor(Math.random() * json.messages.length);
     return json.messages[randomIndex];
@@ -22,7 +26,7 @@ function App() {
   return process.env.REACT_APP_PASSWORD ? (
     <div className="container">
       <h1 className="title">MY SNACK 💗</h1>
-      <Message text={getRandomMessage()} />
+      <Message text={getRandomMessage()} image={getRandomImage()} />
     </div>
   ) : (
     <div className="wrapper min-h-screen flex text-left justify-center">
